@@ -1,19 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context = ".MainActivity">
 
-    <data>
-
-    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/black"
+        android:background="@drawable/gradient_background"
         tools:context=".ui.home.HomeActivity">
 
-        
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/user_profile_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></de.hdodenhof.circleimageview.CircleImageView>
+
+        <ImageView
+            android:id="@+id/profile_talk"
+            android:layout_width="97dp"
+            android:layout_height="104dp"
+            android:layout_marginLeft="32dp"
+            android:src="@drawable/profile_talk"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/ddoring_breakimg"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/profile_img"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp"
+            android:src="@drawable/user_profile"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@id/profile_talk"
+            app:layout_constraintTop_toTopOf="@id/profile_talk" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/fix_CircleBtn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="84dp"
+            android:layout_marginBottom="82dp"
+            android:src="@drawable/fix_profile"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/ddoring_breakimg"
+            app:layout_constraintStart_toStartOf="@id/ddoring_breakimg" />
+
+
+        <ImageView
+            android:id="@+id/ddoring_breakimg"
+            android:layout_width="352dp"
+            android:layout_height="352dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ddoring_breaktime"
+            app:layout_constraintBottom_toTopOf="@id/hour_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/hour_btn"
+            android:layout_width="166dp"
+            android:layout_height="113dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/layout_background_homebtn"
+            app:layout_constraintBottom_toTopOf="@id/next_btn_2"
+            app:layout_constraintEnd_toStartOf="@id/minute_btn"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="44dp"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="@id/hour_btn"
+            app:layout_constraintEnd_toEndOf="@id/hour_btn"
+            app:layout_constraintStart_toStartOf="@id/hour_btn"
+            app:layout_constraintTop_toTopOf="@id/hour_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="69dp"
+            android:layout_marginBottom="24dp"
+            android:text="시"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/hour_btn"
+            app:layout_constraintEnd_toEndOf="@id/hour_btn"
+            app:layout_constraintStart_toStartOf="@id/hour_btn"
+            app:layout_constraintTop_toTopOf="@id/hour_btn" />
+
+
+        <ImageButton
+            android:id="@+id/minute_btn"
+            android:layout_width="166dp"
+            android:layout_height="113dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/layout_background_homebtn"
+            app:layout_constraintBottom_toTopOf="@id/next_btn_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/hour_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="44dp"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="@id/minute_btn"
+            app:layout_constraintEnd_toEndOf="@id/minute_btn"
+            app:layout_constraintStart_toStartOf="@id/minute_btn"
+            app:layout_constraintTop_toTopOf="@id/minute_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="69dp"
+            android:layout_marginBottom="24dp"
+            android:text="분"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/minute_btn"
+            app:layout_constraintEnd_toEndOf="@id/minute_btn"
+            app:layout_constraintStart_toStartOf="@id/minute_btn"
+            app:layout_constraintTop_toTopOf="@id/minute_btn" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/next_btn_2"
+            android:text="도파민 즐기기"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="52dp"
+            android:background="@drawable/layout_background_gray"
+            app:layout_constraintBottom_toTopOf="@id/pause_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/pause_btn"
+            android:layout_width="84dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="42dp"
+            android:background="@color/transparent"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:src="@drawable/pause_second"
+            app:layout_constraintEnd_toEndOf="@id/next_btn_2"
+            app:layout_constraintStart_toStartOf="@id/next_btn_2"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
