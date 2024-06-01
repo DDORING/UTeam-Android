@@ -1,214 +1,273 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/black"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/black">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/user_img"
-        android:background="@color/main_color"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/user_box">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/ddoring_img"
-            android:layout_width="150dp"
-            android:layout_height="190dp"
-            android:layout_marginBottom="50dp"
-            android:background="@color/white"
-            android:src="@drawable/ddoring"
-            android:layout_marginTop="80dp"
-            app:layout_constraintBottom_toBottomOf="@+id/user_img"
-            app:layout_constraintEnd_toEndOf="@+id/user_img"
-            app:layout_constraintStart_toStartOf="@+id/user_img"
-            app:layout_constraintTop_toTopOf="parent">
-
-        </ImageView>
-
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="50dp"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:text="도파민에 절여진 또랑이를 구해주세요!"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ddoring_img">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5">
 
-        </TextView>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/user_img"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:background="@drawable/corner_bottom_radius"
+                app:layout_constraintBottom_toTopOf="@id/myUid"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/toMypageBtn"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/mypage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/ddoring_img"
+                    android:layout_width="150dp"
+                    android:layout_height="190dp"
+                    android:layout_marginTop="80dp"
+                    android:background="@color/white"
+                    android:src="@drawable/ddoring"
+                    app:layout_constraintEnd_toEndOf="@+id/user_img"
+                    app:layout_constraintStart_toStartOf="@+id/user_img"
+                    app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/user_box"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        app:layout_constraintTop_toBottomOf="@id/user_img"
-        app:layout_constraintStart_toStartOf="@+id/user_img"
-        app:layout_constraintEnd_toEndOf="@+id/user_img">
+                </ImageView>
 
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="50dp"
+                    android:gravity="center"
+                    android:text="도파민에 절여진 솔이"
+                    android:textColor="@color/black"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ddoring_img">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="56dp"
+                    android:layout_marginBottom="48dp"
+                    android:gravity="center"
+                    android:text="도파민에 중독되지 않아야 솔이를 구할 수 있어요"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:id="@+id/myUid"
-                android:layout_marginLeft="40dp"
-                android:text="사용 중인 알림"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:text="내 또링"
                 android:textColor="@color/white"
+                android:textSize="16sp"
                 android:textStyle="bold"
-                android:textSize="20sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_img" />
 
+            <ImageView
+                android:id="@+id/addoringBtn"
+                android:layout_width="67dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/addring"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/myUid" />
 
-           <androidx.constraintlayout.widget.ConstraintLayout
-               android:id="@+id/user_push"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               app:layout_constraintTop_toBottomOf="@id/myUid"
-               app:layout_constraintStart_toStartOf="@+id/myUid"
-               app:layout_constraintEnd_toEndOf="@+id/myUid"
-               android:orientation="horizontal"
-               android:layout_marginTop="20dp"
-               android:layout_marginLeft="40dp"
-               android:layout_marginRight="40dp"
-               android:padding="20dp"
-               android:background="@drawable/layout_background">
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myUid">
 
-               <de.hdodenhof.circleimageview.CircleImageView
-                   android:id="@+id/profile_circle"
-                   app:layout_constraintEnd_toStartOf="@id/fixText"
-                   app:layout_constraintBottom_toBottomOf="@id/user_push"
-                   app:layout_constraintStart_toStartOf="@id/user_push"
-                   app:layout_constraintEnd_toEndOf="@id/user_push"
-                   android:src="@drawable/white_image"
-                   android:layout_marginLeft="15dp"
-                   android:layout_width="50dp"
-                   android:layout_height="50dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="134dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner_dark_gray"
+                    android:orientation="vertical">
 
-               </de.hdodenhof.circleimageview.CircleImageView>
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="24dp"
+                        android:src="@drawable/charactor1" />
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:text="사용중인 또링"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
 
-               <TextView
-                   android:id="@+id/fixText"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginLeft="20dp"
-                   android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                   app:layout_constraintStart_toEndOf="@+id/profile_circle"
-                   app:layout_constraintBottom_toBottomOf="@id/profile_circle"
-                   app:layout_constraintTop_toTopOf="@id/profile_circle"
-                   android:text="푸시알림 문구입니다." />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="134dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner_dark_gray"
+                    android:orientation="vertical">
 
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="24dp"
+                        android:src="@drawable/charactor1" />
 
+                    <TextView
+                        android:id="@+id/toDdoringRepoBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:text="또링 저장소"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
 
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="26dp"
+                android:text="설정"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-               <de.hdodenhof.circleimageview.CircleImageView
-                   android:id="@+id/fixbtn"
-                   android:src="@drawable/fixbtn"
-                   android:layout_width="40dp"
-                   android:layout_height="50dp"
-                   android:layout_marginBottom="8dp"
-                   app:layout_constraintTop_toBottomOf="@+id/fixText"
-                   app:layout_constraintBottom_toBottomOf="@id/user_push"
-                   app:layout_constraintEnd_toEndOf="@id/user_push">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5">
 
-               </de.hdodenhof.circleimageview.CircleImageView>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/editNotificationBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/round_corner_dark_gray">
 
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:text="알림"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5" />
 
+                    <Switch
+                        android:layout_width="42dp"
+                        android:layout_height="22dp"
+                        android:layout_marginEnd="24dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView7" />
 
-           </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:text="또링저장소"
-            android:id="@+id/ddoring_saver"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="40dp"
-            app:layout_constraintStart_toEndOf="@+id/user_push"
-            app:layout_constraintTop_toBottomOf="@+id/user_push"
-            app:layout_constraintEnd_toEndOf="@id/user_push">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/editProfileBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/round_corner_dark_gray">
 
-        </TextView>
+                    <TextView
+                        android:id="@+id/textView37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:text="프로필 편집"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5" />
 
+                    <ImageView
+                        android:layout_width="42dp"
+                        android:layout_height="22dp"
+                        android:layout_marginEnd="25dp"
+                        android:src="@drawable/gobtn"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView37" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-        <View
-            android:id="@+id/user_line"
-            android:background="#ced4da"
-            android:layout_width="match_parent"
-            android:layout_height="4px"
-            android:layout_marginTop="25dp"
-            app:layout_constraintTop_toBottomOf="@id/ddoring_saver"/>
-
-        <TextView
-            android:id="@+id/settings"
-            android:textColor="@color/red"
-            android:text="환경설정"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/user_line"/>
-        
-        <TextView
-            android:id="@+id/alarm_set"
-            android:text="알림설정"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:textColor="@color/white"
-            android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/settings"
-            app:layout_constraintStart_toStartOf="@id/settings"/>
-
-        <Switch
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:layout_marginRight="40dp"
-            app:layout_constraintStart_toStartOf="@id/alarm_set"
-            app:layout_constraintBottom_toBottomOf="@id/alarm_set"/>
-
-
-
-        <TextView
-            android:id="@+id/logout"
-            android:text="로그아웃"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:textColor="@color/white"
-            app:layout_constraintTop_toBottomOf="@id/alarm_set"
-            app:layout_constraintStart_toStartOf="@id/alarm_set"/>
-
-        <TextView
-            android:id="@+id/outforever"
-            android:text="회원탈퇴"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:textColor="@color/white"
-            app:layout_constraintTop_toBottomOf="@+id/logout"
-            app:layout_constraintStart_toStartOf="@id/logout"/>
-
-
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
