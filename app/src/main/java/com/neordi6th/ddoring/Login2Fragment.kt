@@ -1,17 +1,14 @@
 package com.neordi6th.ddoring
 
 
-import android.net.wifi.aware.Characteristics
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil.setContentView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.neordi6th.ddoring.databinding.FragmentLogin2Binding
-import com.neordi6th.ddoring.databinding.ItemRcviewLoginBinding
 
 
 class Login2Fragment: Fragment() {
@@ -26,6 +23,11 @@ class Login2Fragment: Fragment() {
 
         binding = FragmentLogin2Binding.inflate(inflater, container, false)
 
+        binding.apply {
+            nextBtn2.setOnClickListener {
+                findNavController().navigate(R.id.action_login2Fragment_to_addProfileImageFragment)
+            }
+        }
         val recyclerView = binding.loginRcview
 
         val dataset = arrayListOf<CharacterData>()

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_register"
+    app:startDestination="@id/login2Fragment">
+
+    <fragment
+        android:id="@+id/login2Fragment"
+        android:name="com.neordi6th.ddoring.Login2Fragment"
+        android:label="Login2Fragment" >
+        <action
+            android:id="@+id/action_login2Fragment_to_addProfileImageFragment"
+            app:destination="@id/addProfileImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/login1Fragment"
+        android:name="com.neordi6th.ddoring.Login1Fragment"
+        android:label="Login1Fragment">
+        <action
+            android:id="@+id/action_userFragment_to_login2Fragment"
+            app:destination="@id/login2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addProfileImageFragment"
+        android:name="com.neordi6th.ddoring.ui.register.AddProfileImageFragment"
+        android:label="AddProfileImageFragment" >
+        <action
+            android:id="@+id/action_addProfileImageFragment_to_login2Fragment2"
+            app:destination="@id/login2Fragment" />
+    </fragment>
+</navigation>
