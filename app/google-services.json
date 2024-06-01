@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "940149106953",
+    "project_id": "ddoring-b727d",
+    "storage_bucket": "ddoring-b727d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940149106953:android:93adb142dc095ec4bccbd8",
+        "android_client_info": {
+          "package_name": "com.neordi6th.ddoring"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_3A_JhakUXgGKd2BXT5Ih0YT0aoxKMQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
