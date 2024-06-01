@@ -45,7 +45,46 @@
         app:layout_constraintTop_toTopOf="@id/chat_user"
         app:layout_constraintBottom_toBottomOf="@id/chat_user"
         app:layout_constraintStart_toEndOf="@id/chat_user"
+        android:src="@drawable/character_chat" >
+    </androidx.appcompat.widget.AppCompatImageView>
+
+    <TextView
+        android:id="@+id/chat_text01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "솔아~! 도파민 중독에 굴복하지 마!!\n얼른 할일하고 나랑 놀자💛"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintTop_toTopOf="@id/chat_box"
+        app:layout_constraintStart_toStartOf="@id/chat_box"
+        app:layout_constraintBottom_toBottomOf="@id/chat_box"/>
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/chat_box_2"
+        android:layout_width="240dp"
+        android:layout_height="88dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/chat_box"
+        app:layout_constraintEnd_toEndOf="@id/chat_box"
         android:src="@drawable/character_chat" />
+
+    <TextView
+        android:id="@+id/chat_text_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "나랑 한 약속 잊지 않았겠지?\n약속 어기면 나 진짜 서운해ㅜㅜ"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintTop_toTopOf="@id/chat_box_2"
+        app:layout_constraintStart_toStartOf="@id/chat_box_2"
+        app:layout_constraintBottom_toBottomOf="@id/chat_box_2"/>
+
+
 
 
     <androidx.appcompat.widget.AppCompatButton
