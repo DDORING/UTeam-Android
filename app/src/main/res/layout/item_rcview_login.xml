@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="13dp"
                 android:layout_marginTop="12dp"
-                android:text="얼른 하고 나랑 놀자~💛"
+                android:text="얼른 하고 나랑 놀자"
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@id/sample_image"

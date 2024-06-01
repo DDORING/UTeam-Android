@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
@@ -17,6 +16,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ddoring"
         tools:targetApi="31">
+        <activity
+            android:name=".ui.home.SelectCharacterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.mypage.DdoringRepositoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.mypage.EditDdoringActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.mypage.MypageActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.home.HomeActivity"
             android:exported="false" />
