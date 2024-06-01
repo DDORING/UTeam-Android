@@ -2,7 +2,5 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="whitegray">#F5F5F5</color>
-    <color name="darkgray">#2E2E2E</color>
-    <color name="yellowbtn">#FFEE95</color>
+
 </resources>
