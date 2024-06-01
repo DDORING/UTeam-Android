@@ -17,7 +17,7 @@ class AuthInterceptor() : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
 
         val accessToken = GlobalApplication.userPrefs.getAccessToken(DEFAULT_VALUE)
-        val request = chain.request().putTokenHeader(getAccessToken()!!)
+        val request = chain.request().putTokenHeader("Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBY2Nlc3NUb2tlbiIsImV4cCI6MTcxNzg3Mzk0MywiZW1haWwiOiI3NzdlYTNkOS00NzEwLTQ2MGYtYTY2Yi03MzQ3ODcxMzhmNjFAc29jaWFsVXNlci5jb20ifQ.wYRryX_3VxaIWRwukhdp1iRCPFCe5UHCwLXLUXlej_jCKTx0D7wIkuPKgomB45Ds_SD9DPOkY_ovUCwnzVCWRA")
         val response = chain.proceed(request)
 
         // Access Token이 존재하지 않을경우 해당 응답 반환

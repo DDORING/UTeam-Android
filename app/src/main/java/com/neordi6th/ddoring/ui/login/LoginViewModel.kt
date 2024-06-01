@@ -3,19 +3,24 @@ package com.neordi6th.ddoring.ui.login
 import android.content.Context
 import android.util.Log
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.model.ClientError
 import com.kakao.sdk.common.model.ClientErrorCause
 import com.kakao.sdk.user.UserApiClient
 import com.neordi6th.ddoring.repository.login.LoginRepository
+import com.neordi6th.ddoring.repository.member.MemberRepository
 import com.neordi6th.ddoring.ui.UiState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
+import okhttp3.MultipartBody
 
 class LoginViewModel : ViewModel() {
     private val TAG = LoginViewModel::class.simpleName
+    private val memberRepository = MemberRepository()
     private val loginRepository = LoginRepository()
 
     private val _loginState = MutableStateFlow<UiState<Boolean>>(UiState.Empty)
@@ -30,6 +35,17 @@ class LoginViewModel : ViewModel() {
             val token = loginRepository.login(token.accessToken)
             // 토큰 저장 후 true값 넘김
             _loginState.update { UiState.Success(true) }
+        }
+    }
+
+    fun uploadCharacter(name: String, image: MultipartBody.Part) {
+        viewModelScope.launch {
+            val response = memberRepository.uploadCharacter(name, image)
+            if (response.isSuccessful) {
+                Log.d(TAG, "uploadCharacter: success")
+            } else {
+                Log.d(TAG, "uploadCharacter: ${response.message()} ${response.code()}")
+            }
         }
     }
 

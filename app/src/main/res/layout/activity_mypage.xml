@@ -134,6 +134,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/myUid">
 
                     <LinearLayout
+                        android:id="@+id/usingDdoring"
                         android:layout_width="match_parent"
                         android:layout_height="134dp"
                         android:layout_marginStart="15dp"
@@ -161,6 +162,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/toDdoringRepoBtn"
                         android:layout_width="match_parent"
                         android:layout_height="134dp"
                         android:layout_marginEnd="15dp"
@@ -176,7 +178,6 @@
                             android:src="@drawable/charactor1" />
 
                         <TextView
-                            android:id="@+id/toDdoringRepoBtn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
