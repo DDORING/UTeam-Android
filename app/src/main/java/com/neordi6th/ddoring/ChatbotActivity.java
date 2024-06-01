@@ -44,7 +44,8 @@ public class ChatbotActivity extends AppCompatActivity{
     public static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
     OkHttpClient client = new OkHttpClient();
 
-    private static final String MY_SECRET_KEY = "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";
+//    private static final String MY_SECRET_KEY = "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";
+    private static final String MY_SECRET_KEY = "sk";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +56,7 @@ public class ChatbotActivity extends AppCompatActivity{
 
         //여기서부터 챗봇***
         recycler_view = findViewById(R.id.recycler_view);
+        //지워진 챗봇 activity.xml 코드
 //        tv_welcome = findViewById(R.id.tv_welcome);
 //        et_msg = findViewById(R.id.et_msg);
 //        btn_send = findViewById(R.id.btn_send);
