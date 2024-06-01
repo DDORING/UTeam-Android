@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/black">
+    android:background="@drawable/gradient_background">
 
 
 
@@ -14,10 +14,30 @@
         android:text="누구에게 알림을 \n받을까요?"
         android:layout_marginTop="100dp"
         android:layout_marginLeft="16dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="32sp"
         app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/profile_talk"
+        android:layout_width="97dp"
+        android:layout_height="104dp"
+        android:layout_marginLeft="32dp"
+        android:src="@drawable/profile_talk"
+        app:layout_constraintBottom_toTopOf="@id/next_btnbox"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:src="@drawable/yello_rentangle"
+        app:layout_constraintTop_toTopOf="@id/profile_talk"
+        app:layout_constraintStart_toStartOf="@id/profile_talk" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="54dp"
@@ -36,9 +56,19 @@
         android:id="@+id/next_btnbox"
         app:layout_constraintBottom_toBottomOf="parent">
 
+        <ImageView
+            android:id="@+id/ddoring_breakimg"
+            android:layout_width="352dp"
+            android:layout_height="352dp"
+            android:src="@drawable/ddoring_breaktime"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toTopOf="@id/next_btn_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
         <ImageButton
             android:id="@+id/next_btn_1"
-            android:background="@drawable/layout_background"
+            android:background="@drawable/layout_background_gray"
             android:layout_width="match_parent"
             android:layout_height="73dp"
             android:layout_marginLeft="16dp"
@@ -54,7 +84,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:gravity = "center"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_marginBottom="55dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@id/next_btn_1" />

@@ -51,6 +51,7 @@
             app:layout_constraintStart_toStartOf="@id/ddoring_breakimg"/>
 
 
+
         <ImageView
             android:id="@+id/ddoring_breakimg"
             android:layout_width="352dp"
