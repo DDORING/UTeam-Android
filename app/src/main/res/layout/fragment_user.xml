@@ -43,13 +43,13 @@
                     android:src="@drawable/mypage"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <ImageView
                     android:id="@+id/ddoring_img"
                     android:layout_width="150dp"
                     android:layout_height="190dp"
                     android:layout_marginTop="80dp"
-                    android:background="@color/white"
-                    android:src="@drawable/ddoring"
+                    android:src="@drawable/addictedstate"
                     app:layout_constraintEnd_toEndOf="@+id/user_img"
                     app:layout_constraintStart_toStartOf="@+id/user_img"
                     app:layout_constraintTop_toTopOf="parent">
@@ -57,7 +57,7 @@
                 </ImageView>
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/ddoringState"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -75,6 +75,7 @@
                 </TextView>
 
                 <TextView
+                    android:id="@+id/ddoringContent"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="56dp"
@@ -88,7 +89,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                    app:layout_constraintTop_toBottomOf="@+id/ddoringState" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
