@@ -27,10 +27,12 @@
             android:layout_height="104dp"
             android:layout_marginLeft="32dp"
             android:src="@drawable/profile_talk"
+            android:visibility="visible"
             app:layout_constraintBottom_toTopOf="@id/ddoring_breakimg"
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
+            android:id="@+id/profile_img"
             android:layout_width="85dp"
             android:layout_height="85dp"
             android:layout_marginLeft="6dp"
@@ -38,15 +40,18 @@
             android:layout_marginRight="6dp"
             android:layout_marginBottom="6dp"
             android:src="@drawable/user_profile"
+            android:visibility="visible"
             app:layout_constraintStart_toStartOf="@id/profile_talk"
             app:layout_constraintTop_toTopOf="@id/profile_talk" />
 
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/fix_CircleBtn"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_marginLeft="84dp"
             android:layout_marginBottom="82dp"
             android:src="@drawable/fix_profile"
+            android:visibility="visible"
             app:layout_constraintBottom_toTopOf="@id/ddoring_breakimg"
             app:layout_constraintStart_toStartOf="@id/ddoring_breakimg" />
 

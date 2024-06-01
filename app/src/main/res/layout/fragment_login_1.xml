@@ -6,7 +6,6 @@
     android:background="@drawable/gradient_background">
 
 
-
     <TextView
         android:id="@+id/text_alarm"
         android:layout_width="match_parent"

@@ -32,7 +32,7 @@
                 android:background="@drawable/img_background"
                 android:clipToOutline="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/sample"
+                android:src="@drawable/user_profile"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
