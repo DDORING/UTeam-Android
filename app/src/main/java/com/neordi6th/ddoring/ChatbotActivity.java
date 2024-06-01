@@ -44,8 +44,7 @@ public class ChatbotActivity extends AppCompatActivity{
     public static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
     OkHttpClient client = new OkHttpClient();
 
-
-    private static final String MY_SECRET_KEY = "sk";
+    private static final String SK = "sk";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,7 +137,7 @@ public class ChatbotActivity extends AppCompatActivity{
         RequestBody body = RequestBody.create(object.toString(), JSON);
         Request request = new Request.Builder()
                 .url("https://api.openai.com/v1/chat/completions")  //url 경로 수정됨
-                .header("Authorization", "Bearer "+MY_SECRET_KEY)
+                .header("Authorization", "Bearer "+ SK)
                 .post(body)
                 .build();
 
