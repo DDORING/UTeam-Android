@@ -90,19 +90,36 @@
             android:id="@+id/inputNickname"
             android:layout_width="0dp"
             android:layout_height="70dp"
-            android:layout_marginTop="16dp"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/round_corner_dark_gray"
             android:hint="어떻게 불리고 싶나요?"
-            android:textColorHint="#595959"
             android:paddingStart="32dp"
             android:paddingTop="24dp"
             android:paddingEnd="32dp"
             android:paddingBottom="24dp"
+            android:textColorHint="#595959"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nextBtn"
+            android:layout_width="0dp"
+            android:layout_height="73dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:text="다음"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="@drawable/round_color_yello"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
