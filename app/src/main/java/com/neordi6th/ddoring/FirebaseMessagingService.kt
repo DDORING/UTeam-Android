@@ -25,6 +25,7 @@ class FirebaseMessagingService : FirebaseMessagingService() {
         // 수신한 메세지 처리
         // notification이 존재하면 앱이 백그라운드에 있을 때 onMessageReceived에서 제어 불가. 따라서 message.data에 모든 정보 존재
         super.onMessageReceived(message)
+        Log.d(TAG, "onMessageReceived: $message")
     }
 
     private fun saveTokenToServer(token: String) {

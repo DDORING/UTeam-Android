@@ -48,7 +48,7 @@ class HomeActivity : AppCompatActivity() {
             totalTimeInMinutes = hours * 60 + minutes
 
             startTimer(totalTimeInMinutes)
-            Toast.makeText(this@HomeActivity, "타이머가 시작되었습니다", Toast.LENGTH_LONG).show()
+            Toast.makeText(this@HomeActivity, "도파민 분출", Toast.LENGTH_LONG).show()
         }
     }
 
