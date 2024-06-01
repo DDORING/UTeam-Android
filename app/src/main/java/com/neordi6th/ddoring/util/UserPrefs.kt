@@ -26,4 +26,9 @@ class UserPrefs(context: Context) {
 
     fun getRefreshToken(defValue: String) = sharedPreference.getString("RefreshToken", defValue)
 
+    fun setDDoringId(value: Int) {
+        editor.putInt("id", value).apply()
+    }
+
+    fun getDdoringId() = sharedPreference.getInt("id", -1)
 }
