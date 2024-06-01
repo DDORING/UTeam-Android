@@ -19,9 +19,6 @@
             android:name=".ui.home.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.login.MakeProfileActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.login.LoginActivity"
             android:exported="false" />
         <activity
