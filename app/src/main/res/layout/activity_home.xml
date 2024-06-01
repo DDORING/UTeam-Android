@@ -3,17 +3,130 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
+        android:background="@drawable/gradient_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/black"
         tools:context=".ui.home.HomeActivity">
 
-        
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/user_profile_gray"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <ImageView
+            android:layout_width="352dp"
+            android:layout_height="352dp"
+            android:src="@drawable/ddoring_breaktime"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@id/hour_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/hour_btn"
+            android:layout_width="166dp"
+            android:layout_height="113dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/layout_background_homebtn"
+            app:layout_constraintBottom_toTopOf="@id/next_btn_2"
+            app:layout_constraintEnd_toStartOf="@id/minute_btn"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="44dp"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="@id/hour_btn"
+            app:layout_constraintEnd_toEndOf="@id/hour_btn"
+            app:layout_constraintStart_toStartOf="@id/hour_btn"
+            app:layout_constraintTop_toTopOf="@id/hour_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="69dp"
+            android:layout_marginBottom="24dp"
+            android:text="시"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/hour_btn"
+            app:layout_constraintEnd_toEndOf="@id/hour_btn"
+            app:layout_constraintStart_toStartOf="@id/hour_btn"
+            app:layout_constraintTop_toTopOf="@id/hour_btn" />
+
+
+        <ImageButton
+            android:id="@+id/minute_btn"
+            android:layout_width="166dp"
+            android:layout_height="113dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/layout_background_homebtn"
+            app:layout_constraintBottom_toTopOf="@id/next_btn_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/hour_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="44dp"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="@id/minute_btn"
+            app:layout_constraintEnd_toEndOf="@id/minute_btn"
+            app:layout_constraintStart_toStartOf="@id/minute_btn"
+            app:layout_constraintTop_toTopOf="@id/minute_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="69dp"
+            android:layout_marginBottom="24dp"
+            android:text="분"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/minute_btn"
+            app:layout_constraintEnd_toEndOf="@id/minute_btn"
+            app:layout_constraintStart_toStartOf="@id/minute_btn"
+            app:layout_constraintTop_toTopOf="@id/minute_btn" />
+
+
+        <ImageButton
+            android:id="@+id/next_btn_2"
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/layout_background_gray"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="55dp"
+            android:gravity="center"
+            android:text="도파민 즐기기"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
