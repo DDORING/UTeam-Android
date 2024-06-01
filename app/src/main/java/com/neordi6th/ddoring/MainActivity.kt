@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         val v1 = binding.profileTalk
         val v2 = binding.profileTalk
         val v3 = binding.fixCircleBtn
+        val v4 = binding.pauseBtn
 
 
         binding.nextBtn2.setOnClickListener{
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity() {
             v1.visibility = View.GONE
             v2.visibility = View.GONE
             v3.visibility = View.GONE
+            v4.visibility = View.VISIBLE
 
         }
 

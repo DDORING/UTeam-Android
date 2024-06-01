@@ -143,40 +143,36 @@
             app:layout_constraintTop_toTopOf="@id/minute_btn" />
 
 
-        <ImageButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/next_btn_2"
-            android:layout_width="match_parent"
-            android:layout_height="73dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="32dp"
-            android:background="@drawable/layout_background_gray"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="55dp"
-            android:gravity="center"
             android:text="도파민 즐기기"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="52dp"
+            android:background="@drawable/layout_background_gray"
+            app:layout_constraintBottom_toTopOf="@id/pause_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
 
         <ImageButton
             android:id="@+id/pause_btn"
             android:layout_width="84dp"
             android:layout_height="22dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="42dp"
             android:background="@color/transparent"
             android:scaleType="fitXY"
+            android:visibility="gone"
             android:src="@drawable/pause_second"
             app:layout_constraintEnd_toEndOf="@id/next_btn_2"
             app:layout_constraintStart_toStartOf="@id/next_btn_2"
-            app:layout_constraintTop_toBottomOf="@id/next_btn_2" />
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
