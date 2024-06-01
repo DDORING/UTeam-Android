@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/home_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/text_alarm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="100dp"
+        android:text="선재와 약속한\n1시간이 지났어요"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/chat_user"
+        android:layout_width="67dp"
+        android:layout_height="67dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="248.5dp"
+        android:src="@drawable/user_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/chat_box"
+        android:layout_width="240dp"
+        android:layout_height="88dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintTop_toTopOf="@id/chat_user"
+        app:layout_constraintBottom_toBottomOf="@id/chat_user"
+        app:layout_constraintStart_toEndOf="@id/chat_user"
+        android:src="@drawable/character_chat" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/finish_btn"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/layout_background_gray"
+        android:text="알았어 그만할게🥺"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/keep_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/keep_btn"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/layout_background_homebtn"
+        android:text="5분만 더..."
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
