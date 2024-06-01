@@ -55,9 +55,9 @@ public class ChatbotActivity extends AppCompatActivity{
 
         //여기서부터 챗봇***
         recycler_view = findViewById(R.id.recycler_view);
-        tv_welcome = findViewById(R.id.tv_welcome);
-        et_msg = findViewById(R.id.et_msg);
-        btn_send = findViewById(R.id.btn_send);
+//        tv_welcome = findViewById(R.id.tv_welcome);
+//        et_msg = findViewById(R.id.et_msg);
+//        btn_send = findViewById(R.id.btn_send);
 
         recycler_view.setHasFixedSize(true);
         LinearLayoutManager manager = new LinearLayoutManager(this);
