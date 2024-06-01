@@ -23,20 +23,9 @@
         android:layout_width="97dp"
         android:layout_height="104dp"
         android:layout_marginLeft="32dp"
-        android:src="@drawable/profile_talk"
+        android:src="@drawable/question_chat"
         app:layout_constraintBottom_toTopOf="@id/next_btnbox"
         app:layout_constraintStart_toStartOf="parent"/>
-
-    <ImageView
-        android:layout_width="85dp"
-        android:layout_height="85dp"
-        android:layout_marginRight="6dp"
-        android:layout_marginLeft="6dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginBottom="6dp"
-        android:src="@drawable/yello_rentangle"
-        app:layout_constraintTop_toTopOf="@id/profile_talk"
-        app:layout_constraintStart_toStartOf="@id/profile_talk" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="54dp"
