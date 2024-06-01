@@ -44,7 +44,7 @@ public class ChatbotActivity extends AppCompatActivity{
     public static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
     OkHttpClient client = new OkHttpClient();
 
-//    private static final String MY_SECRET_KEY = "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";
+
     private static final String MY_SECRET_KEY = "sk";
 
     @Override
